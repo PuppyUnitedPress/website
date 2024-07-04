@@ -1,11 +1,11 @@
 <script lang="ts">
     import { articleList } from "$lib/articles";
-    import { MetaTags } from 'svelte-meta-tags'
+    // import { MetaTags } from 'svelte-meta-tags'
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
     <MetaTags title="Puppy United Press" description="The best news source for puppies" />
-</svelte:head>
+</svelte:head> -->
 
 <main>
     <h1>Puppy United Press</h1>
