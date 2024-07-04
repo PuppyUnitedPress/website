@@ -21,7 +21,7 @@ export const articles: Record<string, Article> = Object.fromEntries(Object.value
         // @ts-expect-error index signature
         i.metadata[key] = i.metadata[key].replace(/：/g, ":");
     }
-    return [i.metadata.slug, i];
+    return [i.metadata.slug.toLowerCase(), i];
 }));
 
 export const articleList = Object.values(articles).map(article => article.metadata).sort((a, b) => {

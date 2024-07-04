@@ -1,14 +1,14 @@
 ---
 title: X (formerly Twitter) verifies false Deer Park Police Department account
-slug: X-verifies-false-account
+slug: x-verifies-false-account
 createdAt: 1720118242
 summary: An account claiming to be the DPPD was given a grey check on Sunday, according to officials.
 author: mariwari401
 ---
 
 <script lang="ts">
-    import img from "./deer-park.jpg";
-    </script>
+    import img from "./x-verifies-false-account.jpg";
+</script>
 
 Things are not looking good for Elon Musk's platform. For a few days, an account claiming to be the DPPD was verified with a grey government checkmark, meaning X staff manually verified the account to be affiliated with a local government. The account mainly made SILLY GOOFY posts, but that didn't stop X from eventually removing the grey check.
 

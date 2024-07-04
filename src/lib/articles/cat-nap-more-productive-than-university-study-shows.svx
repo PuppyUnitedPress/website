@@ -1,0 +1,19 @@
+---
+title: Cat Nap (Literally) More Productive Than University, Study Shows
+slug: cat-nap-more-productive-than-university-study-shows
+createdAt: 1720124152
+summary: A study from Myahn University found that taking a nice long kitty cat nap is more productive than higher education.
+author: Pivvy1S4
+---
+
+<script lang="ts">
+    import img from "./cat-nap-more-productive-than-university-study-shows.png";
+</script>
+
+**A study** from Myahn University found that taking a nice long kitty cat nap is more productive than attending higher education, such as university and college. The study involved taking a lil babie kitty cattie and gibing her nice long kitty cattie nap ^.^ lil girl slept for a few hours, and when she woke up was capable of anything.
+
+After testing the intelligence of the cat, they found it no longer had a lego brick for a brain, was the most intellegent creature in the universe, beyond humans, and was capable of *taking over and destroying humanity.*
+
+"I've never seen a more horrifying creature in my entire life," said John Manhattan (K.M.D. (kitty medical doctor)), a kitty cat veterinarian at the University, who was conducting the experiments on lil kity caat, "I fear this is the furthest we've strayed from Owner."
+
+<img src={img} alt="A diagram provided by Myahn University, showing the lil kitty cat babie's supirior intelligence" />
