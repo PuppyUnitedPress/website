@@ -12,7 +12,7 @@
 
     <h2>Articles</h2>
     <ul>
-        {#each articleList as article}
+        {#each articleList.filter(i=>!i.unpublished) as article}
             <li><a href="/{article.slug}">{article.title}</a></li>
         {/each}
     </ul>

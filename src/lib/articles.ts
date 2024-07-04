@@ -6,6 +6,7 @@ interface FrontMatter {
     title: string;
     summary: string;
     author: string;
+    unpublished?: boolean;
 }
 
 interface Article {
