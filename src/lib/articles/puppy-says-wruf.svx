@@ -6,8 +6,6 @@ summary: little doggie barks! so cute!
 author: Pivvy1s5
 ---
 
-# BREAKING: pupy sais: "wruf!"
-
 *shes a good girl!*
 __yeah! yea she is!__
 ## why did she wruf

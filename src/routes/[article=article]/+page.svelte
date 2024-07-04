@@ -14,4 +14,8 @@
     <!-- <MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} /> -->
 </svelte:head>
 
+<main>
+    <h1>{data.article.metadata.title}</h1>
+    <p>Article by <a href={`https://x.com/${data.article.metadata.author}`}>@{data.article.metadata.author}</a></p>
+</main>
 <svelte:component this={component} />
