@@ -1,5 +1,4 @@
 <script lang="ts">
-    import "./app.css"
     import PUPPAWTRANS from "$lib/assets/logos/PUPPAWTRANS.png"
     import PUPLOGOTRANS from "$lib/assets/logos/PUPLOGOTRANS.png"
 </script>
