@@ -1,6 +1,6 @@
 ---
 title: BREAKING： pupy sais： "wruf!"
-slug: breaking-puppy-says-wruf
+slug: puppy-says-wruf
 createdAt: 1720059609
 summary: little doggie barks! so cute!
 author: Pivvy1s5
