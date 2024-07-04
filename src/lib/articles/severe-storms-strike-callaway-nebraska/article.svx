@@ -1,0 +1,19 @@
+---
+title: Weather - Severe Storms Move Through Callaway, Nebraska, Miraculously Leaves No Damage
+slug: severe-storms-strike-callaway-nebraska
+createdAt: 1720130199
+summary: Severe storms moved through parts of Nebraska on July 3rd, including a Tornado Warning in Callaway, Nebraska.
+author: mariwari401
+---
+
+<script lang="ts">
+    import img from "./image.jpeg";
+</script>
+
+July 3rd was an eventful day for parts of Nebraska, including the town of Callaway. At 6:41 PM, National Weather Service office North Platte issued a tornado warning for the town. Miraculously, no local storm damage was reported.
+
+"Was I freaked out? No, I was pretty calm during the storm. However, I secretly felt nervous." Callaway resident Allison Trumbull stated in an interview. The warning mentioned the sighting of an observed tornado and half dollar sized hail. "Luckily the warning didn't last a full hour, because no homes or trees were damaged and everyone was OK"
+
+The town was hit with heavy rain and gusty winds, as well as frequent lightning strikes. "The town I live in (Callaway) usually only gets one warning per year."
+
+<img src={img} alt="Tornado Warning" />`;
