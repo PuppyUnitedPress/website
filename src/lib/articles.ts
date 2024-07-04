@@ -12,7 +12,7 @@ interface Article {
     metadata: FrontMatter;
     default: () => Component;
 }
-const globArticles: Record<string, Article> = import.meta.glob("./articles/*.svx", { eager: true });
+const globArticles: Record<string, Article> = import.meta.glob("./articles/**/*.svx", { eager: true });
 export const articles: Record<string, Article> = Object.fromEntries(Object.values(globArticles).filter(i=>i.metadata).map(i=>{
     // Replace ： with : everywhere in the metadata
     for (const key in i.metadata) {

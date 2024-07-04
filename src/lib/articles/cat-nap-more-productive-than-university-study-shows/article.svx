@@ -7,7 +7,7 @@ author: Pivvy1S4
 ---
 
 <script lang="ts">
-    import img from "./cat-nap-more-productive-than-university-study-shows.png";
+    import img from "./image.png";
 </script>
 
 **A study** from Myahn University found that taking a nice long kitty cat nap is more productive than attending higher education, such as university and college. The study involved taking a lil babie kitty cattie and gibing her nice long kitty cattie nap ^.^ lil girl slept for a few hours, and when she woke up was capable of anything.
