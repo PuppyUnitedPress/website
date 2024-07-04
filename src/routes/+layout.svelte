@@ -9,9 +9,9 @@
 </svelte:head>
 
 <main>
-    <header class="h-10">
+    <!-- <header class="h-10">
         <a href="/"><img src={PUPLOGOTRANS} alt="Puppy United Press" /></a>
         <h1>Puppy United Press</h1>
-    </header>
+    </header> -->
     <slot />
 </main>
