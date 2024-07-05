@@ -1,9 +1,10 @@
-import { MetaTagsProps } from "svelte-meta-tags";
+import type { MetaTagsProps } from 'svelte-meta-tags';
 
-const MetaTagsColor = (color: string) => [{
-  rel: undefined as unknown as string,
-  href: undefined as unknown as string,
-  color,
-}]as MetaTagsProps["additionalLinkTags"][keyof MetaTagsProps["additionalLinkTags"]];
+const MetaTagsColor = (color: string): MetaTagsProps['additionalMetaTags'] => [
+	{
+		name: 'theme-color',
+		content: color
+	}
+];
 
 export default MetaTagsColor;

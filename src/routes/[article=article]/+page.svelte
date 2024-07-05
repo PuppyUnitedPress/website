@@ -11,7 +11,7 @@
     const component = data.article.default as C;
 </script>
 
-<MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} additionalLinkTags={MetaTagsColor(LOGO_COLORS.blue)}/>
+<MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} additionalMetaTags={MetaTagsColor(LOGO_COLORS.blue)}/>
 
 <svelte:head>
     <title>{data.article.metadata.title}</title>
