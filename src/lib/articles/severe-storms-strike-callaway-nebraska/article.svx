@@ -16,4 +16,4 @@ July 3rd was an eventful day for parts of Nebraska, including the town of Callaw
 
 The town was hit with heavy rain and gusty winds, as well as frequent lightning strikes. "The town I live in (Callaway) usually only gets one warning per year."
 
-<img src={img} alt="Tornado Warning" />`;
+<img src={img} alt="Tornado Warning" />

@@ -21,13 +21,15 @@
     <div class="header">
         <div class="left">
         <a href="/"><img src={PUPLOGOTRANS} alt="Puppy United Press" /></a>
-        <h1>Puppy's United Press</h1>
+        <!-- <a href="/latest">Latest Articles</a> -->
     </div>
     <div class="right">
         <button onclick={toggleDark}>{dark ? "☽" : "☼"}</button>
     </div>
     </div>
+    <div class="root">
     {@render children()}
+</div>
 </main>
 
 <style>
@@ -51,12 +53,17 @@
         height: 100%;
     }
 
+    :global(a) {
+        color: inherit;
+    }
+
     .header {
         height: 50px;
 
         display: flex;
         vertical-align: middle;
         text-align: center;
+        justify-content: space-between;
 
         .left, .right {
             height: 100%;
@@ -77,5 +84,12 @@
         img, a:has(img) {
             height: 100%;
         }
+    }
+
+
+    .root {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
     }
 </style>

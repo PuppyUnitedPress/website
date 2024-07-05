@@ -1,17 +1,43 @@
 <script lang="ts">
     import { articleList } from "$lib/articles";
-    // import { MetaTags } from 'svelte-meta-tags'
+    import { MetaTags } from 'svelte-meta-tags'
 </script>
 
-<!-- <svelte:head>
-    <MetaTags title="Puppy United Press" description="The best news source for puppies" />
-</svelte:head> -->
+<MetaTags title="Puppy United Press" description="The best news source for puppies" />
 
 <main>
     <h2>Articles</h2>
-    <ul>
+    <div class="list">
         {#each articleList.filter(i=>!i.unpublished) as article}
-            <li><a href="/{article.slug}">{article.title}</a></li>
+            <a href="/{article.slug}" class="article">
+                <h3>{article.title}</h3>
+            
+                <p class="summary">{article.summary}</p>
+            </a>
         {/each}
-    </ul>
+    </div>
 </main>
+
+<style>
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1em;
+    }
+
+    .article {
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    h3 {
+        text-decoration: underline;
+    }
+</style>
