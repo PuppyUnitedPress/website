@@ -12,7 +12,14 @@
     const component = data.article.default as C;
 </script>
 
-<MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} additionalMetaTags={MetaTagsColor(LOGO_COLORS.blue)}/>
+<MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} additionalMetaTags={MetaTagsColor(LOGO_COLORS.blue)}
+twitter={
+    {
+        title: data.article.metadata.title,
+        description: data.article.metadata.summary,
+        handle: "@PuppyUnitedPress",
+    }
+}/>
 
 <svelte:head>
     <title>{data.article.metadata.title}</title>

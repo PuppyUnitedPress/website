@@ -12,7 +12,9 @@
 	title="Puppy United Press"
 	description="The best news source for Furries And Therians"
 	twitter={{
-		image: PUPLOGOTRANS
+		image: PUPLOGOTRANS,
+		title: 'Puppy United Press',
+		description: 'The best news source for Furries And Therians',
 	}}
 	additionalMetaTags={MetaTagsColor(LOGO_COLORS.blue)}
 />
