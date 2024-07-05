@@ -2,6 +2,8 @@
 	import { page } from "$app/stores";
 	import { articleList, articles } from "$lib/articles";
     import { MetaTags } from 'svelte-meta-tags'
+    import { LOGO_COLORS } from "$lib/constants";
+    import MetaTagsColor from "$lib/shortcuts/metatags/color";
 
     const { data } = $props();
 
@@ -9,7 +11,7 @@
     const component = data.article.default as C;
 </script>
 
-<MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} />
+<MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} additionalLinkTags={MetaTagsColor(LOGO_COLORS.blue)}/>
 
 <svelte:head>
     <title>{data.article.metadata.title}</title>

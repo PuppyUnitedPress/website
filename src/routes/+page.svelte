@@ -1,9 +1,16 @@
 <script lang="ts">
     import { articleList } from "$lib/articles";
     import { MetaTags } from 'svelte-meta-tags'
+    import PUPLOGOTRANS from "$lib/assets/logos/PUPLOGOTRANS.png"
+	import MetaTagsColor from "$lib/shortcuts/metatags/color";
+
+    import { LOGO_COLORS } from "$lib/constants";
 </script>
 
-<MetaTags title="Puppy United Press" description="The best news source for puppies" />
+<MetaTags title="Puppy United Press" description="The best news source for puppies" twitter={{
+    image: PUPLOGOTRANS
+}}
+additionalLinkTags={MetaTagsColor(LOGO_COLORS.blue)}/>
 
 <main>
     <h2>Articles</h2>
