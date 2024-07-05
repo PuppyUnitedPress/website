@@ -1,38 +1,36 @@
-# create-svelte
+# Puppy's United Press Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Welcome! This is the website of the Puppy United Press, News for all, LGBTQ+, therians, humans, and furries!
 
-## Creating a project
+The website is up at [pup.lvna.gay](https://pup.lvna.gay) until we get a domain ^.^
 
-If you're seeing this, you've probably already done this step. Congrats!
+If you are looking for our articles, check in `./src/lib/articles`! Everything else is handled under `./src/routes`
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Writing Articles
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Articles are written in [Svelte Markdown](https://mdsvex.com)! In most cases, you will only use markdown syntax
 
-## Developing
+The main exception for this is if you need images, where you will use svelte syntax to import the file and render an image element
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+The dashed area at the top of the files is called FrontMatter. It is how the server knows extra info about the article!
 
-```bash
-npm run dev
+It follows yaml syntax, and impliments the [FrontMatter Interface](https://github.com/PuppyUnitedPress/website/blob/main/src/lib/articles.ts#L4)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Heres an explanation of everything:
 
-## Building
+- `slug`: The url!
+- `createdAt`: The [Unix Timestamp](https://www.unixtimestamp.com/) of when the article was written
+- `title`: The title of the article
+- `summary`: A short summary of the article, to be shown in social media embeds and on the home page
+- `author`: The author's X username
+- `unpublished`: (optional) setting this to true will hide the link from our homepage, but will keep the slug active! We are currently using this for the 3 test articles, as we want to keep them but don't want to clutter the homepage
 
-To create a production version of your app:
+## Dev Server
 
-```bash
-npm run build
-```
+To spin up a server, do the following!
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- [Install pnpm](https://pnpm.io/installation)
+- Clone the repo `git clone https://github.com/puppyunitedpress/website.git pupwebsite`
+- Go into the repo `cd pupwebsite`
+- Install Dependencies `pnpm install`
+- Run the server! `pnpm dev`

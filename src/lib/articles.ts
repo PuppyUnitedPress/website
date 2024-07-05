@@ -1,5 +1,6 @@
 import type { Component } from "svelte";
 
+// If you move the interface off line 4, remember to update the README!
 interface FrontMatter {
     slug: string;
     createdAt: string;
