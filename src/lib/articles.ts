@@ -3,7 +3,7 @@ import type { Component } from "svelte";
 // If you move the interface off line 4, remember to update the README!
 interface FrontMatter {
     slug: string;
-    createdAt: string;
+    createdAt: number;
     title: string;
     summary: string;
     author: string;
@@ -23,6 +23,8 @@ export const articles: Record<string, Article> = Object.fromEntries(Object.value
         // @ts-expect-error index signature
         i.metadata[key] = i.metadata[key].replace(/：/g, ":");
     }
+    // hacky, idk why we need this?
+    i.metadata.createdAt = Number(i.metadata.createdAt.toString() + "000")
     return [i.metadata.slug.toLowerCase(), i];
 }));
 

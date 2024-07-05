@@ -3,13 +3,14 @@
 	import { MetaTags } from 'svelte-meta-tags';
 	import PUPLOGOTRANS from '$lib/assets/logos/PUPLOGOTRANS.png';
 	import MetaTagsColor from '$lib/shortcuts/metatags/color';
+    import moment from 'moment';
 
 	import { LOGO_COLORS } from '$lib/constants';
 </script>
 
 <MetaTags
 	title="Puppy United Press"
-	description="The best news source for puppies"
+	description="The best news source for Furries And Therians"
 	twitter={{
 		image: PUPLOGOTRANS
 	}}
@@ -22,6 +23,8 @@
 		{#each articleList.filter((i) => !i.unpublished) as article}
 			<a href="/{article.slug}" class="article">
 				<h3>{article.title}</h3>
+                <h4>{article.author}</h4>
+                <h5>{moment(article.createdAt).format("MMM Do YY")}</h5>
 
 				<p class="summary">{article.summary}</p>
 			</a>

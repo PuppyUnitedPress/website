@@ -4,11 +4,14 @@
     import { MetaTags } from 'svelte-meta-tags'
     import { LOGO_COLORS } from "$lib/constants";
     import MetaTagsColor from "$lib/shortcuts/metatags/color";
+    import moment from 'moment';
 
     const { data } = $props();
 
     type C = $$Generic<typeof SvelteComponentTyped<any, any, any>>;
     const component = data.article.default as C;
+
+    console.log(data.article.metadata.createdAt);
 </script>
 
 <MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} additionalMetaTags={MetaTagsColor(LOGO_COLORS.blue)}/>
@@ -20,6 +23,7 @@
 <main>
     <h1>{data.article.metadata.title}</h1>
     <p>Article by <a href={`https://x.com/${data.article.metadata.author}`}>@{data.article.metadata.author}</a></p>
+    <p>Wrote on {moment(data.article.metadata.createdAt).format("l")}</p>
 </main>
 <div>
 <svelte:component this={component} />
