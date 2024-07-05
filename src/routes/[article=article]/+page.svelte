@@ -10,8 +10,6 @@
 
     type C = $$Generic<typeof SvelteComponentTyped<any, any, any>>;
     const component = data.article.default as C;
-
-    console.log(data.article.metadata.createdAt);
 </script>
 
 <MetaTags title={data.article.metadata.title} description={data.article.metadata.summary} additionalMetaTags={MetaTagsColor(LOGO_COLORS.blue)}/>
