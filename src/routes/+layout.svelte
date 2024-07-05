@@ -1,16 +1,81 @@
 <script lang="ts">
     import PUPPAWTRANS from "$lib/assets/logos/PUPPAWTRANS.png"
     import PUPLOGOTRANS from "$lib/assets/logos/PUPLOGOTRANS.png"
+
+    const { data, children } = $props();
+
+    let dark = $state(data.dark)
+
+    const toggleDark = () => {
+        // toggle the "dark" cookie
+        dark = !dark;
+        document.cookie = `dark=${dark}; path=/; max-age=31536000`;
+    }
 </script>
 <svelte:head>
     <link rel="icon" href={PUPPAWTRANS} />
     <title>Puppy United Press</title>
 </svelte:head>
 
-<main>
-    <!-- <header class="h-10">
+<main class:dark={dark}>
+    <div class="header">
+        <div class="left">
         <a href="/"><img src={PUPLOGOTRANS} alt="Puppy United Press" /></a>
-        <h1>Puppy United Press</h1>
-    </header> -->
-    <slot />
+        <h1>Puppy's United Press</h1>
+    </div>
+    <div class="right">
+        <button onclick={toggleDark}>{dark ? "☽" : "☼"}</button>
+    </div>
+    </div>
+    {@render children()}
 </main>
+
+<style>
+
+    :global(html, body) {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: #f0f0f0;
+
+        .dark {
+            background-color: #202020;
+            color: #f0f0f0;
+        }
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        height: 50px;
+
+        display: flex;
+        vertical-align: middle;
+        text-align: center;
+
+        .left, .right {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .left {
+            justify-self: left;
+            padding-left: 10px;
+        }
+
+        .right {
+            justify-self: right;
+            padding-right: 10px;
+        }
+
+        img, a:has(img) {
+            height: 100%;
+        }
+    }
+</style>

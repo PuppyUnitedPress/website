@@ -8,8 +8,6 @@
 </svelte:head> -->
 
 <main>
-    <h1>Puppy United Press</h1>
-
     <h2>Articles</h2>
     <ul>
         {#each articleList.filter(i=>!i.unpublished) as article}
