@@ -1,9 +1,6 @@
 <script lang="ts">
     import PUPPAWTRANS from "$lib/assets/logos/PUPPAWTRANS.png"
     import PUPLOGOTRANS from "$lib/assets/logos/PUPLOGOTRANS.png"
-
-
-    export const prerender = true;
 </script>
 <svelte:head>
     <link rel="icon" href={PUPPAWTRANS} />
