@@ -15,6 +15,9 @@
 <svelte:head>
     <link rel="icon" href={PUPPAWTRANS} />
     <title>Puppy United Press</title>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9830041258194012"
+     crossorigin="anonymous"></script>
 </svelte:head>
 
 <main class:dark={dark}>
