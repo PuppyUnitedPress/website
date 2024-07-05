@@ -25,7 +25,7 @@ Heres an explanation of everything:
 - `author`: The author's X username
 - `unpublished`: (optional) setting this to true will hide the link from our homepage, but will keep the slug active! We are currently using this for the 3 test articles, as we want to keep them but don't want to clutter the homepage
 
-## Limitations
+### Limitations
 
 There are some limitations we have found while writing articles, and the ways we have overcome them
 
