@@ -25,6 +25,15 @@ Heres an explanation of everything:
 - `author`: The author's X username
 - `unpublished`: (optional) setting this to true will hide the link from our homepage, but will keep the slug active! We are currently using this for the 3 test articles, as we want to keep them but don't want to clutter the homepage
 
+## Limitations
+
+There are some limitations we have found while writing articles, and the ways we have overcome them
+
+- You cannot use a normal colon (`:`) in articles frontmatter
+- - Fix: Use a fullwidth colon (`：`) instead! The server automatically replaces that with the normal colon, so users will see no difference!
+- You cannot use angled brackets in svelte markdown, as it conflicts with svelte syntax
+- - We have not found a way to get past this yet, and help would be greatly appreciated
+
 ## Dev Server
 
 To spin up a server, do the following!
