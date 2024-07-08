@@ -1,10 +1,11 @@
+import { Theme } from "$lib/constants";
 import type { LayoutServerLoad } from "./$types";
 
-export const prerender = true;
+export const prerender = false;
 
 export const load: LayoutServerLoad = async ({cookies, url}) => {
     return {
-        dark: cookies.get("dark") === "true",
-        noads: url.searchParams.has("noads"),
+        theme: cookies.get("theme") as Theme || Theme.Unset,
+        noads: url.searchParams.has("noads") || cookies.get("noads") === "true",
     }
 }

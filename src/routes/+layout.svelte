@@ -1,16 +1,33 @@
 <script lang="ts">
     import PUPPAWTRANS from "$lib/assets/logos/PUPPAWTRANS.png"
     import PUPLOGOTRANS from "$lib/assets/logos/PUPLOGOTRANS.png"
+	import { onMount, setContext } from "svelte";
+	import { Theme } from "$lib/constants.js";
+	import { enhance } from "$app/forms";
+	import { browser } from "$app/environment";
 
     const { data, children } = $props();
 
-    let dark = $state(data.dark)
+    let theme = $state(data.theme);
 
-    const toggleDark = () => {
-        // toggle the "dark" cookie
-        dark = !dark;
-        document.cookie = `dark=${dark}; path=/; max-age=31536000`;
-    }
+    $inspect(theme);
+    
+    setContext("theme", {
+        get value() {
+            return theme;
+        },
+        set value(val) {
+            theme = val;
+        }
+    });
+
+    $effect(() => {
+        if (browser) {
+            if (!theme || theme === Theme.Unset) {
+                theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? Theme.Dark : Theme.Light;
+            }
+        }
+    })
 </script>
 <svelte:head>
     <link rel="icon" href={PUPPAWTRANS} />
@@ -22,14 +39,16 @@
     {/if}
 </svelte:head>
 
-<main class:dark={dark}>
+<main class:dark={theme === Theme.Dark}>
     <div class="header">
         <div class="left">
         <a href="/"><img src={PUPLOGOTRANS} alt="Puppy United Press" /></a>
         <!-- <a href="/latest">Latest Articles</a> -->
     </div>
     <div class="right">
-        <button onclick={toggleDark}>{dark ? "☽" : "☼"}</button>
+        <form use:enhance={() => () => theme = theme === Theme.Dark ? Theme.Light : Theme.Dark} action={"/settings?/" + (theme === Theme.Dark ? "light" : "dark") + "Theme"} method="post">
+            <button type="submit">{theme === Theme.Dark ? "☽" : "☼"}</button>
+        </form>
     </div>
     </div>
     <div class="root">
