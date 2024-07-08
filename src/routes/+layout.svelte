@@ -10,8 +10,6 @@
 
     let theme = $state(data.theme);
 
-    $inspect(theme);
-    
     setContext("theme", {
         get value() {
             return theme;
